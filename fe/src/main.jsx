@@ -8,6 +8,6 @@ import Signup from "./components/Signup";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Login />
+    <Signup />
   </StrictMode>
 );
