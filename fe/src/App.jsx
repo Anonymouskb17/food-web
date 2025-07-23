@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar.jsx";
 import SignInPage from "./pages/signin.jsx";
-import Signup from "./components/signup.jsx";
+import Signup from "./pages/signup.jsx";
 
 function App() {
   return (
