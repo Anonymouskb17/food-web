@@ -213,7 +213,7 @@ export default function Signup() {
           </Box>
 
           <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-            Đã có tài khoản? <Link href="/login">Đăng nhập</Link>
+            Đã có tài khoản? <Link href="/signin">Đăng nhập</Link>
           </Typography>
         </CardContent>
       </Card>
