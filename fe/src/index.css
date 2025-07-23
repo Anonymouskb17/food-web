@@ -1,7 +1,3 @@
-:root{
-    --background-color: orange;
-    --width: 100%;
-    --heigh:100%;
-    
-
-}
+.custom-input .MuiOutlinedInput-root {
+    border-radius: 50px;
+  }
