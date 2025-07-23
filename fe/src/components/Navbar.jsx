@@ -17,7 +17,7 @@ export default function Navbar() {
           <Button color="inherit" component={Link} to="/signup">
             Đăng ký
           </Button>
-          <Button color="inherit" component={Link} to="/login">
+          <Button color="inherit" component={Link} to="/signin">
             Đăng nhập
           </Button>
         </Toolbar>
