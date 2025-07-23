@@ -44,7 +44,7 @@ export default function Signup() {
       return;
     }
     setError("");
-    alert("Đăng ký thành công!");
+    alert("Đăng nhập thành công!");
   };
 
   return (
@@ -61,35 +61,18 @@ export default function Signup() {
         <CardMedia
           component="img"
           height="250"
-          image="/images/food.jpg"
+          image="/images/signin.jpg"
           alt="green iguana"
         />
         <CardContent>
           <Typography variant="h5" align="left" gutterBottom>
-            Đăng ký
+            Đăng nhập
           </Typography>
           <Box
             component="form"
             onSubmit={handleSubmit}
             sx={{ mt: 2, display: "flex", flexDirection: "column", gap: 2 }}
           >
-            <TextField
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <PeopleAltOutlinedIcon />
-                  </InputAdornment>
-                ),
-              }}
-              label="Họ và tên"
-              placeholder="Nhập họ và tên"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              fullWidth
-              className="custom-input"
-            />
             <TextField
               InputProps={{
                 startAdornment: (
@@ -126,35 +109,32 @@ export default function Signup() {
               fullWidth
               className="custom-input"
             />
-            <TextField
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <KeyOutlinedIcon />
-                  </InputAdornment>
-                ),
-              }}
-              label="Nhập lại mật khẩu"
-              placeholder="Nhập lại mật khẩu"
-              name="confirmPassword"
-              type="password"
-              value={form.confirmPassword}
-              onChange={handleChange}
-              required
-              fullWidth
-              className="custom-input"
-            />
-            <FormControlLabel
-              control={
-                <Checkbox
-                  name="remember"
-                  checked={form.remember}
-                  onChange={handleChange}
-                  color="primary"
-                />
-              }
-              label="Ghi nhớ đăng nhập"
-            />
+            <Box>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    name="remember"
+                    checked={form.remember}
+                    onChange={handleChange}
+                    color="primary"
+                  />
+                }
+                label="Ghi nhớ đăng nhập"
+              />
+              <Link
+                href="#"
+                underline="none"
+                sx={{
+                  float: "right",
+                  color: "#aquamarine",
+                  mt: 1,
+                  ":hover": { color: "#df7020" },
+                }}
+              >
+                {"Quên mật khẩu?"}
+              </Link>
+            </Box>
+
             {error && (
               <Typography color="error" variant="body2" align="center">
                 {error}
@@ -166,7 +146,7 @@ export default function Signup() {
               sx={{ backgroundColor: "#df7020", borderRadius: 50, py: 2 }}
               fullWidth
             >
-              Đăng ký
+              Đăng nhập
             </Button>
 
             <Divider sx={{ my: 3 }} textAlign="center">
@@ -213,7 +193,7 @@ export default function Signup() {
           </Box>
 
           <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-            Đã có tài khoản? <Link href="/login">Đăng nhập</Link>
+            Chưa có tài khoản? <Link href="/signup">Đăng ký</Link>
           </Typography>
         </CardContent>
       </Card>
